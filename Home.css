@@ -1,0 +1,370 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color:#e50914;
+    --secondary-color: #141414;
+    --primary-color:#ffff;
+    --dark-red-on-hover:#f40612;
+    --other-red:#b20610;
+    --norminal-white:#b3b3b3;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--secondary-color);  
+    color:var (--primary-color);
+}
+/* search */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Pushes the search container to the right */
+}
+
+.search-box {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px; /* Width of the search box */
+    margin-right: 8px; /* Space between the search box and button */
+}
+
+.search-btn {
+    background-color: var(--main-color); /* Netflix red */
+    color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: var(--dark-red-on-hover); /* Darker red on hover */
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--secondary-color);
+}
+
+.logo img {
+    height: 30px;
+}
+
+.navbar a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #b3b3b3;
+}
+
+/* User Menu Styling */
+.user-menu {
+    position: relative;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.dropdown a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 0;
+}
+
+.dropdown a:hover {
+    color: #b3b3b3;
+}
+
+.dropdown.show {
+    display: block;
+}
+
+/* Hero Section Styling */
+.hero {
+    height: 83vh;
+    background: url('images/wallpaperflare.com_wallpaper.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.play-btn, .info-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.play-btn {
+    background-color: var(--main-color);
+    color: var(--primary-color);
+}
+
+.info-btn {
+    background-color: #6d6d6d;
+    color: var(--primary-color);
+}
+
+
+/* Video Cards Section */
+.video-cards {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.video-cards h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Card Container */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Video Card Styling */
+.video-card {
+    position: relative;
+    width: 200px; /* Adjust as needed */
+    height: 350px; /* Adjust as needed */
+    background-color: #111;
+    border-radius: 8px;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-card:hover {
+    transform: scale(1.05);
+}
+
+.video-card img {
+    width: 112%;
+    height: 72%; /* Reserve half the card height for image */
+    object-fit: cover; /* Ensure image fills the space without distortion */
+}
+
+.video-info h2 {
+    font-size: 1.2em;
+    margin: 0 0 8px;
+    color: #fff;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; /* Keep title on one line */
+}
+
+.video-info p {
+    font-size: 0.9em;
+    color: var(--norminal-white);
+    line-height: 1.4;
+    margin: 0 0 10px;
+    max-height: 80px; /* Adjust based on available space */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis;
+}
+ 
+.watch-btn {
+    padding: 6px 12px;
+    font-size: 0.9em;
+    color:var(--primary-color);
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: start; /* Aligns button to the left */
+}
+
+.watch-btn:hover {
+    background-color: var(--dark-red-on-hover);
+}
+
+.description {
+    font-size: 0.9em;
+    color: #b3b3b3;
+    line-height: 1.4;
+    margin: 0 0 10px;
+    max-height: 80px; /* Controls initial height */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+.more-text {
+    display: none; /* Hidden by default */
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: var(--main-color);
+    cursor: pointer;
+    font-size: 0.9em;
+    text-decoration: underline;
+    padding: 0;
+}
+
+.read-more-btn:hover {
+    color: var(--dark-red-on-hover);
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 1.5rem 1rem;
+    color: var(--primary-color);
+}
+
+/* Video Section Styling */
+.video-section {
+    margin-bottom: 2rem;
+}
+
+.video-row {
+    display: flex;
+    overflow-x: auto;
+    padding: 0 1rem;
+}
+
+.video-card {
+    position: relative;
+    flex: 0 0 auto;
+    width: 200px;
+    height: 300px;
+    margin-right: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.video-card video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.video-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.video-info h3 {
+    font-size: 1rem;
+    margin: 0;
+    color: #fff;
+}
+
+.play-btn {
+    background-color: var(--main-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.play-btn:hover {
+    background-color: var(--other-red);
+}
+
+/* Scrollbar for Video Rows */
+.video-row {
+    scrollbar-width: thin;
+    scrollbar-color: #555 #222;
+}
+
+.video-row::-webkit-scrollbar {
+    height: 8px;
+}
+
+.video-row::-webkit-scrollbar-track {
+    background: #222;
+}
+
+.video-row::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+}
+/* Footer Styling */
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--norminal-white);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    position: relative;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer p:hover {
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+

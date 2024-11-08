@@ -1,0 +1,66 @@
+/* Video Card Container Styling */
+.card-container {
+    display: flex; /* Change to flex layout for horizontal stacking */
+    flex-wrap: wrap; /* Wrap to a new row if there are too many cards */
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Video Card Styling */
+.video-card {
+    display: flex;
+    flex-direction: row; /* Horizontal layout for content inside the card */
+    width: 100%; /* Full width */
+    max-width: 600px; /* Limit max width for each card */
+    height: 180px; /* Set a fixed height for horizontal layout */
+    background-color: #111;
+    border-radius: 8px;
+    overflow: hidden;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-card img,
+.video-card video {
+    width: 40%; /* Set video/image to take 40% of the card's width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Ensures the media fills the designated area */
+}
+
+.video-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    width: 60%; /* Remaining 60% of card width for info */
+}
+
+.video-info h2 {
+    font-size: 1.5em;
+    margin: 0 0 8px;
+    color: #fff;
+}
+
+.video-info p {
+    font-size: 0.9em;
+    color: #b3b3b3;
+    line-height: 1.4;
+    max-height: 3.5em; /* Limit to 2-3 lines */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.watch-btn {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: #e50914;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.watch-btn:hover {
+    background-color: #f40612;
+}

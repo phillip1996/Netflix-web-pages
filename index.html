@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <!-- Sign Up Button -->
+        <a href="sign Up.html" class="signup-btn">Sign Up</a>
+        
+        <!-- Avatar -->
+        <div class="avatar">
+            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="User Avatar">
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Netflix Logo -->
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo">
+        </div>
+
+        <!-- Login Form -->
+        <form action="Home.html" method="POST" onsubmit="return validateForm()">
+            <input type="email" id="email" placeholder="Email or phone number" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="login-btn">Sign In</button>
+        </form>
+
+        <!-- Standalone Remember Me Feature -->
+        <div class="remember-me-section">
+            <input type="checkbox" id="rememberMe" onclick="toggleRememberMe()">
+            <label for="rememberMe">Remember me</label>
+        </div>
+
+        <!-- Help Links -->
+        <div class="help-links">
+            <a href="#" onclick="openHelpModal()">Need help?</a>
+        </div>
+
+        <!-- Forgot Password and Sign Up Links -->
+        <div class="extra-links">
+            <a href="Forgot Password.html">Forgot Password?</a>
+            <span>|</span>
+            <a href="sign Up.html">New to Netflix? Sign Up Now</a>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div id="helpModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeHelpModal()">&times;</span>
+            <h2>How can we help?</h2>
+            <ul>
+                <li><a href="Forgot Password.html">Forgot Password</a></li>
+                <li><a href="faq.html">Frequently Asked Questions</a></li>
+                <li><a href="contact.html">Contact Support</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Load remembered email if it exists
+        window.onload = function() {
+            const rememberedEmail = localStorage.getItem('rememberedEmail');
+            if (rememberedEmail) {
+                document.getElementById('email').value = rememberedEmail;
+                document.getElementById('rememberMe').checked = true;
+            }
+        }
+
+        // Toggle Remember Me
+        function toggleRememberMe() {
+            const email = document.getElementById('email').value;
+            const rememberMeChecked = document.getElementById('rememberMe').checked;
+
+            if (rememberMeChecked && email) {
+                localStorage.setItem('rememberedEmail', email);
+            } else {
+                localStorage.removeItem('rememberedEmail');
+            }
+        }
+
+        // Open Help Modal
+        function openHelpModal() {
+            document.getElementById("helpModal").style.display = "block";
+        }
+
+        // Close Help Modal
+        function closeHelpModal() {
+            document.getElementById("helpModal").style.display = "none";
+        }
+
+        // Close modal if user clicks outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById("helpModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Validate form before submission
+        function validateForm() {
+            const email = document.getElementById('email').value;
+            const password = document.querySelector('input[type="password"]').value;
+
+            // Check if email and password are not empty
+            if (email && password) {
+                return true; // Allow form submission
+            } else {
+                alert("Please enter your email and password."); // Show an alert if fields are empty
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+</body>
+</html>

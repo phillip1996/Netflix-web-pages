@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Home</title>
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo">
+        </div>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">TV Shows</a>
+            <a href="#">Movies</a>
+            <a href="#">New & Popular</a>
+            <a href="#">My List</a>
+        </nav> 
+        <div>
+          <div class="search-container">
+                <input type="text" class="search-box" placeholder="Search...">
+                <button class="search-btn">🔍</button>
+          </div>
+        </div>  
+        <div class="user-menu">
+            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="User Avatar" class="avatar" onclick="toggleDropdown()">
+            <div class="dropdown">
+                <a href="#">Account</a>
+                <a href="#">Settings</a>
+                <a href="index.html">Log Out</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (Featured Movie) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Prison Break</h1>
+            <p>Lincoln is sentenced to death and is incarcerated in Fox River State Penitentiary where he awaits his execution.
+            Lincoln's brother, brilliant structural engineer Michael Scofield, is convinced of Lincoln's innocence and formulates an elaborate escape plan.</p>
+            <button class="play-btn"><a style="text-decoration: none; color:#fff;" href="https://www.netflix.com/watch/70133997?trackId=14170045">▶ Play</a></button>
+            <button class="info-btn">ℹ️ More Info</button>
+        </div>
+    </section>
+
+    <!-- Trending Now Section as a Horizontal Grid -->
+    <!-- <section class="movie-recommendations trending-now">
+        <h2>Trending Now</h2> -->
+        <section class="video-cards">
+            <h1>Trending Videos</h1>
+            <div class="card-container">
+                <!-- Video Card 1 -->
+                <div class="video-card">
+                    <img src="images/movie1.jpg" alt="Video Thumbnail">
+                    <div class="video-info">
+                        <h2>Iron Man 3</h2>
+                        <p>When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.</p>
+                            <button class="read-more-btn">Read More</button>
+                            <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+                
+                <!-- Video Card 2 -->
+                <div class="video-card">
+                    <img src="images/movie2.jpg" alt="Video Thumbnail">
+                    <div class="video-info">
+                        <h2>Harry Porter</h2>
+                        <p>An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world.</p>
+                        <button class="read-more-btn">Read More</button>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+    
+                <!-- Video Card 3 -->
+                <div class="video-card">
+                    <img src="images/movie3.jpg" alt="Video Thumbnail">
+                    <div class="video-info">
+                        <h2>Spider man 3</h2>
+                        <p>A strange black entity from another world bonds with Peter Parker and causes inner turmoil as he contends with new villains, temptations, and revenge.</p>
+                        <button class="read-more-btn">Read More</button>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+    
+                <!-- Video Card 4 -->
+                <div class="video-card">
+                    <img src="images/movie4.jpg" alt="Video Thumbnail">
+                    <div class="video-info">
+                        <h2>Hobbs & Shaw </h2>
+                        <p>Luke Hobbs and Deckard Shaw join Shaw's sister Hattie to take down Brixton Lore, a cybernetically enhanced terrorist, who is threatening the world with a deadly virus.</p>
+                        <button class="read-more-btn">Read More</button>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+
+                <!-- Video Card 5 -->
+                <!-- <div class="video-card">
+                    <img src="images/movie5.jpg" alt="Video Thumbnail">
+                    <div class="video-info">
+                        <h2>Video Title 4</h2>
+                        <p>This is a short description of the video content.</p>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+             <!-- Continue Watching Section -->
+    <section class="video-section">
+        <h2>Continue Watching</h2>
+        <div class="video-row">
+            <div class="video-card">
+                <img src="images/movie5.jpg" >
+                <div class="video-info">
+                    <h3>Insidious 2</h3>
+                    <button class="play-btn">▶ Resume</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="images/movie2.jpg">
+                <div class="video-info">
+                    <h3>Harry Porter</h3>
+                    <button class="play-btn">▶ Resume</button>
+                </div>
+            </div>
+            <!-- You can add more video cards as needed -->
+        </div>
+    </section>
+
+    <!-- Top Picks for You Section -->
+    <section class="video-section">
+        <h2>Top Picks for You</h2>
+        <div class="video-row">
+            <div class="video-card">
+                <img src="images/ninja-turtle-leonardo-hollywood-movie-tr6zfo3d94m4qiv3.jpg" >
+                <div class="video-info">
+                    <h3>Turtle Ninja 3</h3>
+                    <button class="play-btn">▶ Play</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="images/captain-america-movie-7pfd9c9bhrpsv68h.jpg" >
+                <div class="video-info">
+                    <h3>Captain Americ</h3>
+                    <button class="play-btn">▶ Play</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="images/300-movie-6vey1zmcbe1pte4h.jpg">
+                <div class="video-info">
+                    <h3>300</h3>
+                    <button class="play-btn">▶ Play</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="images/caption-a-quiet-moment-on-hollywood-movie-set-gyvlxx8n4hcccpq2.jpg">
+                <div class="video-info">
+                    <h3>Justice League</h3>
+                    <button class="play-btn">▶ Play</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="images/avengers.png">
+                <div class="video-info">
+                    <h3>Avengers</h3>
+                    <button class="play-btn">▶ Play</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="images/Dark Knight.jpeg">
+                <div class="video-info">
+                    <h3>Bat Man: Dark Knight</h3>
+                    <button class="play-btn">▶ Play</button>
+                </div>
+            </div>
+            <!-- Add more video cards as needed -->
+        </div>
+    </section>
+
+    <!-- New Releases Section -->
+    <section class="video-section">
+        <h2>New Releases</h2>
+        <div class="video-row">
+            <div class="video-card">
+                <img src="images/Assasin creed.jpg">
+                <div class="video-info">
+                    <h3>Assassin Creed</h3>
+                    <button class="play-btn">▶ Play</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="images/Titanic.jpg">
+                <div class="video-info">
+                    <h3>Titanic</h3>
+                    <button class="play-btn">▶ Play</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="images/King Kong.jpg">
+                <div class="video-info">
+                    <h3>King Kong</h3>
+                    <button class="play-btn">▶ Play</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="images/Terminator.png">
+                <div class="video-info">
+                    <h3>Terminator: Genisys</h3>
+                    <button class="play-btn">▶ Play</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="images/moana_maui_heihei_chief_tui_sina_4k_hd_moana_2.jpg">
+                <div class="video-info">
+                    <h3>Moana 2</h3>
+                    <button class="play-btn">▶ Play</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="images/gal_gadot_evil_queen_rachel_zegler_snow_white_andrew_burnap_jonathan_lorena_andrea_ansu_kabia_huntsman_4k_hd_snow_white.jpg">
+                <div class="video-info">
+                    <h3>Snow White</h3>
+                    <button class="play-btn">▶ Play</button>
+                </div>
+            </div>
+            <!-- Add more video cards as needed -->
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div>
+            <p>© 2024 Netflix Clone - All Rights Reserved</p>
+        </div>    
+    </footer>
+
+
+         <!------------------------- JAVASCRIPTS CODE ------------------------------------->
+    <!-- JavaScript for Dropdown Menu -->
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.querySelector('.dropdown');
+            dropdown.classList.toggle('show');
+        }
+
+        // Close dropdown if clicked outside
+        window.onclick = function(event) {
+            const dropdown = document.querySelector('.dropdown');
+            if (!event.target.matches('.avatar')) {
+                dropdown.classList.remove('show');
+            }
+        }
+
+  // Control the toggle for the "Read More" button without fully hiding the <p> content.
+        document.addEventListener("DOMContentLoaded", function() {
+    const readMoreBtns = document.querySelectorAll(".read-more-btn");
+
+    readMoreBtns.forEach(button => {
+        button.addEventListener("click", function() {
+            const description = this.previousElementSibling;
+            const isExpanded = description.classList.contains("expanded");
+
+            // Toggle class and button text
+            if (isExpanded) {
+                description.classList.remove("expanded");
+                description.style.maxHeight = "80px";
+                this.textContent = "Read More";
+            } else {
+                description.classList.add("expanded");
+                description.style.maxHeight = "none";
+                this.textContent = "Read Less";
+            }
+        });
+    });
+});
+
+
+    </script>
+</body>
+</html>
